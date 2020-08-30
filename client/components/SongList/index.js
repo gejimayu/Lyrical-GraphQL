@@ -19,7 +19,9 @@ class SongList extends React.Component {
       <ul className="collection">
         {songs.map(({ id, title }) => (
           <li key={id} className="collection-item">
-            {title}
+            <Link to={`/song/${id}`}>
+              {title}
+            </Link>
             <i className="material-icons" onClick={() => this.onSongDelete(id)}>delete</i>
           </li>
         ))}
