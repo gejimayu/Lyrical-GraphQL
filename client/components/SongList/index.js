@@ -12,7 +12,7 @@ class SongList extends React.Component {
           data.loading ? (
             <div>Loading...</div>
           ) : data.songs.map(song => (
-            <div>{song.title}</div>
+            <div key={song.id}>{song.title}</div>
           ))
         }
       </div>
@@ -23,6 +23,7 @@ class SongList extends React.Component {
 const query = gql`
   {
     songs {
+      id
       title
     }
   }
