@@ -40,7 +40,7 @@ class AddNewSong extends React.Component {
         <h3>Add new song</h3>
         <form onSubmit={this.onSubmitForm}>
           <label htmlFor="title">Song title:</label>
-          <input id="title" value={this.state.title} onChange={this.onInputTitleSong} /> 
+          <input id="title" value={this.state.title} onChange={this.onInputTitleSong} autoFocus={true} /> 
         </form>
       </div>
     )
